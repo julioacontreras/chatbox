@@ -1,0 +1,30 @@
+{
+    "name": "luz",
+    "locale": "es",
+    "data": [
+      {
+        "intent": "hi",
+        "utterances": [
+          "hola",
+          "hey"
+        ],
+        "answers": [
+          "Hola",
+          "Hola buenas!",
+          "Hola, en que puedo ayudar?"
+        ]
+      },
+      {
+        "intent": "bye",
+        "utterances": [
+          "chao",
+          "hasta luego"
+        ],
+        "answers": [
+          "hasta luego :)",
+          "chao",
+          "hasta que tenga un buen dia"
+        ]
+      }
+    ]
+}

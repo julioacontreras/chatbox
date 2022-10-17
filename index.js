@@ -6,20 +6,29 @@ const port = 3000
 
 app.use(bodyParser.json())
 
-const { responseBot, trainBot } = require('./bot')
-
-// domains
-const { faqs } = require('./domains/faqs')
-const { greetings } = require('./domains/greetings')
-const { gas } = require('./domains/gas')
+const { responseBot, trainBot, createBot } = require('./bot')
 
 // triggers
 const { generateTrigger } = require('./triggers/generateTrigger')
 
+let botGas = createBot();
+let botLuz = createBot();
+
+const bots = {
+  electricity: botLuz, 
+  gas: botGas
+}
+
+const botDomains = {
+  electricity: ['./luz.json', './greetings.json'], 
+  gas: ['./greetings.json', './gas.json']
+}
+
 app.post('/es/bot', async (req, res) => {
-  const bot = await trainBot([faqs, greetings, gas])
+  const domain = req.body.domain
+  const bot = await trainBot(bots[domain], botDomains[domain])
   const question = req.body.question  
-  const response = await responseBot(question, bot)
+  const response = await findAsnwer(question, bot)
 
   // not find answer
   if (!response.answer) {

@@ -2,6 +2,17 @@ POST http://localhost:3000/es/bot HTTP/1.1
 Content-Type: application/json
 
 {
+    "domain": "electricity",
+    "question": "hay una discrepancia en las lecturas"
+}
+
+###
+
+POST http://localhost:3000/es/bot HTTP/1.1
+Content-Type: application/json
+
+{
+    "domain": "gas",
     "question": "holis"
 }
 
@@ -11,6 +22,7 @@ POST http://localhost:3000/es/bot HTTP/1.1
 Content-Type: application/json
 
 {
+    "domain": "gas",
     "question": "opciones de gas"
 }
 

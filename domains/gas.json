@@ -1,0 +1,16 @@
+{
+    "name": "gas",
+    "locale": "es",
+    "data": [
+      {
+        "intent": "options",
+        "utterances": [
+          "preguntas de gas",
+          "opcionces de gas"
+        ],
+        "answers": [
+          "trigger-1"
+        ]
+      }
+    ]
+}

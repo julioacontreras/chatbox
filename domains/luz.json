@@ -1,0 +1,16 @@
+{
+    "name": "luz",
+    "locale": "es",
+    "data": [
+      {
+        "intent": "light-readings-problem",
+        "utterances": [
+          "preguntas de gas",
+          "opcionces de gas"
+        ],
+        "answers": [
+          "Cosas a tener en cuenta: \n cual es la lectura del cliente? \n cual es la lectura de la factura? \n puede ser qie el cliente ingreso en fechas incorrectas?"
+        ]
+      }
+    ]
+}
